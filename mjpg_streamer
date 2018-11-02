@@ -1,1 +1,21 @@
 mjpg_streamer -i "input_uvc.so -d /dev/video0 -f 15 -r 1280x720" -o "output_http.so -w ./www"
+
+apt-get install build-essential libjpeg8-dev libjpeg62-turbo-dev imagemagick libv4l-dev git cmake uvcdynctrl
+
+apt-get install -y \
+g++ \
+cmake \
+build-essential \
+imagemagick \
+pkg-config \
+libv4l-dev \
+v4l-utils \
+v4l2ucp \
+libjpeg62-turbo-dev
+
+
+
+apt-get install make gcc libevent libjpeg-turbo  libuuid
+
+apt-get install libevent-dev 
+apt-get install uuid-dev
