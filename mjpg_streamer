@@ -19,3 +19,26 @@ apt-get install make gcc libevent libjpeg-turbo  libuuid
 
 apt-get install libevent-dev 
 apt-get install uuid-dev
+
+
+https://github.com/mcdafydd/mjpg-streamer
+mkdir build
+cd build
+cmake ..
+make
+make install
+
+
+https://github.com/uNetworking/uWebSockets
+sudo apt-get install git libuv1-dev libssl-dev gcc g++ cmake make
+git clone https://github.com/uWebSockets/uWebSockets 
+cd uWebSockets
+git checkout e94b6e1
+mkdir build
+cd build
+cmake ..
+make 
+sudo make install
+cd ..
+cd ..
+sudo ln -s /usr/lib64/libuWS.so /usr/lib/libuWS.so
