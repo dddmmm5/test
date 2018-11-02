@@ -14,7 +14,21 @@ v4l-utils \
 v4l2ucp \
 libjpeg62-turbo-dev
 
+!! ORG
+https://github.com/codewithpassion/mjpg-streamer
 
+------
+sudo apt-get install cmake libjpeg62-dev imagemagick libav-tools libv4l-dev 
+
+git clone https://github.com/jacksonliam/mjpg-streamer.git
+cd mjpg-streamer/mjpg-streamer-experimental
+export LD_LIBRARY_PATH=.
+make
+
+sudo ./mjpg_streamer -i "./input_uvc.so -r HD -f 10" -o "./output_http.so"
+
+stream: http://0.0.0.0:8080/?action=stream
+------
 
 apt-get install make gcc libevent libjpeg-turbo  libuuid
 
